@@ -9,5 +9,5 @@ def execute(goals: list, cwd: str, maven_helper=maven):
         maven_helper.print_error(execution_result)
     else: 
         for line in execution_result.stdout.splitlines():
-            print_fn(f"{line}")
+            print(f"{line}")
     return execution_result.return_code
